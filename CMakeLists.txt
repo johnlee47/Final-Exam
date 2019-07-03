@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project(CameraWrapper)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+find_package( OpenCV REQUIRED )
+add_executable( camera CameraWrapper.cpp )
+target_link_libraries( camera ${OpenCV_LIBS} )
